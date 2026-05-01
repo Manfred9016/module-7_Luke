@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 1 Vocabulary Adventure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Afacad+Flux:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --bg-main: #f8fafc;
+            --primary: #6366f1;
+            --text-dark: #1e293b;
+            --text-muted: #475569;
+            --chinese: #4f46e5;
+            --lime: #f0fdf4;
+            --peach: #fff7ed;
+            --purple: #faf5ff;
+            --blue: #eff6ff;
+        }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        
+        body {
+            margin: 0;
+            font-family: 'Afacad Flux', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+        }
+
+        .nav-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .nav-btn:hover { transform: scale(1.05); }
+
+        .slide-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding: 40px 20px;
+        }
+
+        .slide {
+            width: 100%;
+            max-width: 1100px;
+            min-height: 600px;
+            background: white;
+            border-radius: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        h1, h2 { font-family: 'Comfortaa', cursive; margin: 0; }
+        h1 { font-size: 4rem; color: var(--text-dark); }
+        h2 { font-size: 3rem; margin-bottom: 20px; }
+        h3 { font-size: 2rem; margin-bottom: 10px; color: var(--text-dark); }
+        p { font-size: 1.5rem; line-height: 1.4; color: var(--text-muted); margin: 10px 0; }
+        
+        .chinese-text {
+            font-size: 1.8rem;
+            color: var(--chinese);
+            font-weight: 600;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .img-box {
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            height: 400px;
+        }
+
+        .img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .tile {
+            background: var(--bg-main);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .tile i { font-size: 3rem; color: var(--primary); margin-bottom: 15px; }
+
+        .bg-l { background-color: var(--lime); }
+        .bg-p { background-color: var(--peach); }
+        .bg-v { background-color: var(--purple); }
+        .bg-b { background-color: var(--blue); }
+
+        @media (max-width: 850px) {
+            .content-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav-container">
+    <button class="nav-btn" onclick="window.scrollTo(0,0)">↑ Top</button>
+</div>
+
+<div class="slide-wrapper">
+    
+    <div class="slide bg-b" style="justify-content: center; text-align: center;">
+        <h1>Module 7 Adventure</h1>
+        <p>Vocabulary for Grade 1 Students & Parents</p>
+        <span class="chinese-text">Module 7 詞彙指南</span>
+    </div>
+
+    <div class="slide">
+        <h2>1. Deep</h2>
+        <div class="content-grid">
+            <div>
+                <h3>Going Down</h3>
+                <p>Far down from the top.</p>
+                <span class="chinese-text">深的：很長一段距離。</span>
+            </div>
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1518112166137-85899e0782aa?auto=format&fit=crop&q=80&w=800" alt="Deep sea">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide bg-p">
+        <h2>2. Divide</h2>
+        <div class="content-grid">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=800" alt="Pizza">
+            </div>
+            <div>
+                <h3>Sharing</h3>
+                <p>To split into parts.</p>
+                <span class="chinese-text">分開：分成幾部分。</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide bg-v">
+        <h2>3. Fiery</h2>
+        <div class="content-grid">
+            <div>
+                <h3>Hot!</h3>
+                <p>Very hot and bright like fire.</p>
+                <span class="chinese-text">熾熱的：像火一樣熱。</span>
+            </div>
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1541119638723-c51cbe2262aa?auto=format&fit=crop&q=80&w=800" alt="Sun">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide bg-l">
+        <h2>4. Fluffy</h2>
+        <div class="content-grid">
+            <div class="img-box" style="border-radius: 50%;">
+                <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=800" alt="Cat">
+            </div>
+            <div>
+                <h3>Soft Fur</h3>
+                <p>Soft and light.</p>
+                <span class="chinese-text">蓬鬆的：柔軟又輕。</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <h2>5. Nature</h2>
+        <div class="content-grid">
+            <div>
+                <h3>The Forest</h3>
+                <p>Trees, animals, and rivers.</p>
+                <span class="chinese-text">大自然：森林與動物。</span>
+            </div>
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=800" alt="Forest">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide bg-p">
+        <h2>6. Break</h2>
+        <div class="tile-grid">
+            <div class="tile">
+                <i class="fa-solid fa-mug-hot"></i>
+                <h3>Rest</h3>
+                <span class="chinese-text">休息時間</span>
+            </div>
+            <div class="tile">
+                <i class="fa-solid fa-heart-crack"></i>
+                <h3>Snap</h3>
+                <span class="chinese-text">折斷</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide bg-b">
+        <h2>7. Direction</h2>
+        <div class="content-grid">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1496664444929-8c75efb9546f?auto=format&fit=crop&q=80&w=800" alt="Signs">
+            </div>
+            <div>
+                <h3>Which way?</h3>
+                <p>The way you go.</p>
+                <span class="chinese-text">方向：走哪條路。</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <h2>8. Landed</h2>
+        <div class="content-grid">
+            <div>
+                <h3>Touch Ground</h3>
+                <p>Coming down from the air.</p>
+                <span class="chinese-text">著陸：落到地面。</span>
+            </div>
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1506012733851-bb607337efb7?auto=format&fit=crop&q=80&w=800" alt="Landing">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide bg-v">
+        <h2>9. Mission</h2>
+        <div class="content-grid">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&q=80&w=800" alt="Space">
+            </div>
+            <div>
+                <h3>Special Job</h3>
+                <p>An important task.</p>
+                <span class="chinese-text">任務：重要工作。</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <h2>10. Problem</h2>
+        <div class="content-grid">
+            <div>
+                <h3>Puzzle</h3>
+                <p>Something to fix or solve.</p>
+                <span class="chinese-text">問題：需要解決的事。</span>
+            </div>
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?auto=format&fit=crop&q=80&w=800" alt="Puzzle">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide bg-p">
+        <h2>11. Spectacular</h2>
+        <div class="content-grid" style="text-align: center; grid-template-columns: 1fr;">
+            <div>
+                <h3>Amazing!</h3>
+                <p>Beautiful and exciting to see.</p>
+                <span class="chinese-text">壯觀的：令人興奮的美景。</span>
+            </div>
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1498931299472-f7a63a5a1cfa?auto=format&fit=crop&q=80&w=800" alt="Fireworks">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide bg-l">
+        <h2>12. Spindly</h2>
+        <div class="content-grid">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?auto=format&fit=crop&q=80&w=800" alt="Spider">
+            </div>
+            <div>
+                <h3>Long & Thin</h3>
+                <p>Very thin legs or arms.</p>
+                <span class="chinese-text">細長的：長且細。</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide bg-b">
+        <h2>Question 1: Nature</h2>
+        <p>How does a seed change?</p>
+        <div class="tile-grid">
+            <div class="tile"><h3>Seed</h3><span class="chinese-text">種子</span></div>
+            <div class="tile"><h3>Tree</h3><span class="chinese-text">大樹</span></div>
+        </div>
+    </div>
+
+    <div class="slide bg-v">
+        <h2>Question 2: Safety</h2>
+        <p>How to stay safe in a storm?</p>
+        <ul style="font-size: 1.5rem; text-align: left;">
+            <li>Stay <strong>inside</strong>. <span class="chinese-text">待在室內。</span></li>
+            <li>Stay away from <strong>windows</strong>. <span class="chinese-text">遠離窗戶。</span></li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h2>Question 3: Deserts</h2>
+        <div class="content-grid">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&q=80&w=800" alt="Desert">
+            </div>
+            <div>
+                <h3>Hot & Dry</h3>
+                <p>Deserts have very little rain.</p>
+                <p>Camels live here.</p>
+                <span class="chinese-text">沙漠：又熱又乾。</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide bg-l" style="justify-content: center; text-align: center;">
+        <i class="fa-solid fa-star" style="font-size: 5rem; color: #fbbf24;"></i>
+        <h2>Great Learning!</h2>
+        <p>See you next time!</p>
+    </div>
+
+</div>
+
+</body>
+</html>
